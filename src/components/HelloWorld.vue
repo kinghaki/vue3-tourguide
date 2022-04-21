@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="hello" :class="test">
     <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
@@ -40,6 +40,11 @@ export default defineComponent({
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data () {
+    return {
+      test: 'gg'
+    }
   }
 })
 </script>
@@ -59,5 +64,12 @@ li {
 }
 a {
   color: #42b983;
+}
+
+.hello {
+background: #42b983;
+}
+.gg{
+background: yellow;
 }
 </style>
