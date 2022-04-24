@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <AppHeader />
-    <div class="containermx-auto px-5 lg:px-20 mt-20">
+    <div class="containermx-auto px-5 lg:px-20 mt-20 my-20">
       <div class="search lg:flex justify-between">
         <div class="search-left">
           <h1 class="text-4xl">
@@ -16,7 +16,7 @@
           </div>
         </div>
         <div class="search-right">
-          <a-select v-model:value="option" class="w-80">
+          <a-select v-model:value="option" class=" w-full">
             <a-select-option value="探索景點">探索景點</a-select-option>
             <a-select-option value="節慶活動">節慶活動</a-select-option>
             <a-select-option value="品嘗美食">品嘗美食</a-select-option>
@@ -93,7 +93,7 @@
           </div>
         </div>
         <!-- 一再回訪美食 -->
-        <div class="hot-spot w-full mt-8">
+        <div class="foods w-full mt-8">
           <div class="flex justify-between w-full">
             <div class="text-2xl">一再回訪美食</div>
             <div class="text-orange-500 cursor-pointer" @click="router.push({ name: 'food' })">
@@ -142,7 +142,7 @@ export default defineComponent({
     const bannerList = ref<any>([])
     const evnetList = ref<any>([])
     const spotList = ref<any>([])
-    let foodList = ref<any>([])
+    const foodList = ref<any>([])
 
     onMounted(async () => {
       await onInitial()
@@ -182,8 +182,8 @@ export default defineComponent({
 
     const getApiFoodList = async () => {
       const param = '$filter=Picture/PictureUrl1 ne null&$top=4&$skip=10'
-      foodList = await apiGetFoodList(param)
-      console.log('foodList', foodList)
+      foodList.value = await apiGetFoodList(param)
+      console.log('foodList', foodList.value)
     }
 
     const getRouteEventDetail = (event: any, item: any) => {
@@ -241,6 +241,10 @@ export default defineComponent({
   position: static !important;
   display: block !important;
   font-size: 16px;
+}
+
+img{
+  border-radius: 20px;
 }
 
 </style>

@@ -6,7 +6,7 @@
       <div class="spot-select lg:flex mt-4">
         <AppDropDownMenu />
         <a-input v-model:value="spot" placeholder="你想吃甚麼? 請輸入關鍵字" class="lg:mt-0 mt-2" />
-        <a-button class=" bg-green-200 hover:bg-green-500 lg:mt-0 mt-2">
+        <a-button class=" bg-green-200 hover:bg-green-500 lg:mt-0 mt-2 lg:w-20 w-full">
           <template #icon>
             <SearchOutlined />
           </template>
