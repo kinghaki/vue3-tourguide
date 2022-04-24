@@ -1,20 +1,51 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    redirect: 'home'
+
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/home',
+    name: 'home',
+    component: () => import('@/views/AppHome.vue')
+  },
+  {
+    path: '/event',
+    name: 'event',
+    component: () => import('@/views/AppEvent.vue')
+  },
+  {
+    path: '/spot',
+    name: 'spot',
+    component: () => import('@/views/AppSpot.vue')
+  },
+  {
+    path: '/food',
+    name: 'food',
+    component: () => import('@/views/AppFood.vue')
+  },
+  {
+    path: '/event/:id',
+    name: 'EventDetail',
+    component: () => import('@/views/AppEventDetail.vue')
+  },
+  {
+    path: '/spot/:id',
+    name: 'SpotDetail',
+    component: () => import('@/views/AppSpotDetail.vue')
+  },
+  {
+    path: '/food/:id',
+    name: 'FoodDetail',
+    component: () => import('@/views/AppFoodDetail.vue')
+  },
+  {
+    path: '/:pathMatch(.*)*', // router4，萬用字元寫法
+    redirect: '/home'
   }
+
 ]
 
 const router = createRouter({
