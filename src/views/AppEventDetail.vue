@@ -1,7 +1,7 @@
 <template>
   <div id='AppEventDetail'>
     <AppHeader/>
-    <div class="main lg:px-20 px-5 mx-auto">
+    <div class="main lg:px-20 px-5 mx-auto max-w-6xl">
       <AppNav :breadcrumbList="breadcrumbList" />
       <img :src="eventDetail[0]?.Picture.PictureUrl2" alt="" class="w-full h-96 mt-4">
       <div class="text-2xl mt-6">{{eventDetail[0]?.ActivityName}}</div>
