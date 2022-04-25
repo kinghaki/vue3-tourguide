@@ -19,6 +19,15 @@
         </div>
       </div>
     </div>
+    <iframe
+         class="mt-10"
+          width="100%"
+          height="250"
+          frameborder="0" style="border:0"
+          referrerpolicy="no-referrer-when-downgrade"
+          :src="`https://www.google.com/maps/embed/v1/place?key=AIzaSyACwDFpYlaQkcQkdCaUMxSKV3rO9G3hAMI&q=${spotDetail[0]?.Address}`"
+          allowfullscreen>
+    </iframe>
     <AppFooter/>
   </div>
 </template>

@@ -12,10 +12,10 @@
           </h1>
           <div class="flex mt-5">
             <img src="@/assets/icons/AppHome/spot24_Y.svg" alt="">
-            <span> 台灣旅遊景點導覽Taiwan Travel Guide</span>
+            <span> 台灣旅遊景點導覽, Taiwan Travel Guide</span>
           </div>
         </div>
-        <div class="search-right">
+        <!-- <div class="search-right">
           <a-select v-model:value="option" class=" w-full">
             <a-select-option value="探索景點">探索景點</a-select-option>
             <a-select-option value="節慶活動">節慶活動</a-select-option>
@@ -28,7 +28,7 @@
             </template>
             Search
           </a-button>
-        </div>
+        </div> -->
       </div>
       <div class="banner">
         <!-- <a-carousel arrows dotPosition="bottom" autoplay>
@@ -62,7 +62,7 @@
               <div class="left basis-1/4 cursor-pointer" >
                 <img :src="item.Picture.PictureUrl1" alt="" class="md:w-96 w-full md:h-50 h-40 ">
               </div>
-              <div class="right basis-3/4 cursor-pointer flex flex-col justify-evenly">
+              <div class="right basis-3/4 cursor-pointer flex flex-col justify-evenly px-3">
                 <div>
                   <div class="date text-slate-400 ">{{ `${item?.StartTime.substring(0, 10)} - ${item?.EndTime.substring(0, 10)}` }}</div>
                   <div class="title text-2xl font-bold ">{{ item?.ActivityName }}</div>
@@ -127,9 +127,9 @@ export default defineComponent({
   name: 'AppHome',
   components: {
     AppHeader,
-    AppFooter,
+    AppFooter
     /** 按鈕 */
-    SearchOutlined
+    // SearchOutlined
     /** 輪播圖˙ */
     // LeftCircleOutlined,
     // RightCircleOutlined
@@ -198,7 +198,7 @@ export default defineComponent({
         path: `/spot/${item.ScenicSpotID}`
       })
     }
-
+    // 到美食詳細頁
     const getRouteFoodDetail = (event: any, item: any) => {
       router.push({
         path: `/food/${item.RestaurantID}`
