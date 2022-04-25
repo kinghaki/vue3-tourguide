@@ -85,7 +85,7 @@
             </div>
           </div>
           <div class="whole-card grid lg:grid-cols-2 grid-cols1 gap-4 w-full">
-            <div v-for="(item,index) in spotList" :key="index" class="rounded-xl font-bold cursor-pointer">
+            <div v-for="(item,index) in spotList" :key="index" class="rounded-xl font-bold cursor-pointer" @click="getRouteSpotDetail($event,item)">
               <img :src="item.Picture.PictureUrl1" alt="" class="lg:w-80 w-full h-60">
               <div class="text-2xl">{{item.ScenicSpotName}}</div>
               <span class="text-slate-500">{{item.Address.substring(0,3)}}</span>
@@ -101,7 +101,7 @@
             </div>
           </div>
            <div class="whole-card grid lg:grid-cols-2 grid-cols1 gap-4 w-full">
-             <div v-for="(item,index) in foodList" :key="index" class="rounded-xl font-bold cursor-pointer">
+             <div v-for="(item,index) in foodList" :key="index" class="rounded-xl font-bold cursor-pointer" @click="getRouteFoodDetail($event,item)">
               <img :src="item.Picture.PictureUrl1" alt="" class="lg:w-80 w-full h-60">
               <div class="text-2xl">{{item.RestaurantName}}</div>
               <span class="text-slate-500">{{item.City}}</span>
@@ -186,9 +186,22 @@ export default defineComponent({
       console.log('foodList', foodList.value)
     }
 
+    // 到活動詳細頁
     const getRouteEventDetail = (event: any, item: any) => {
       router.push({
         path: `/event/${item.ActivityID}`
+      })
+    }
+    // 到景點詳細頁
+    const getRouteSpotDetail = (event: any, item: any) => {
+      router.push({
+        path: `/spot/${item.ScenicSpotID}`
+      })
+    }
+
+    const getRouteFoodDetail = (event: any, item: any) => {
+      router.push({
+        path: `/food/${item.RestaurantID}`
       })
     }
     return {
@@ -200,7 +213,9 @@ export default defineComponent({
       evnetList,
       spotList,
       foodList,
-      getRouteEventDetail
+      getRouteEventDetail,
+      getRouteSpotDetail,
+      getRouteFoodDetail
 
     }
   }

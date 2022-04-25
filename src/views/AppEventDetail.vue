@@ -17,18 +17,17 @@
           <div><span class="text-xl font-bold">活動費用 :</span> <span class="text-xl">無</span></div>
           <div><span class="text-xl font-bold">注意事項 :</span> <span class="text-xl">無</span></div>
         </div>
-        <div class="map">
-         <iframe
-          width="450"
+      </div>
+    </div>
+     <iframe
+         class="mt-10"
+          width="100%"
           height="250"
           frameborder="0" style="border:0"
           referrerpolicy="no-referrer-when-downgrade"
           :src="`https://www.google.com/maps/embed/v1/place?key=AIzaSyACwDFpYlaQkcQkdCaUMxSKV3rO9G3hAMI&q=${eventDetail[0]?.Address}`"
           allowfullscreen>
-        </iframe>
-        </div>
-      </div>
-    </div>
+      </iframe>
     <AppFooter/>
   </div>
 </template>
