@@ -30,6 +30,8 @@ export default defineComponent({
     const getApiCityList = () => {
       apiGetCityList().then(data => {
         // 將全部縣市加到下拉式選單
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         data.unshift({ CityName: '全部縣市', City: '' })
         cityList.value = data
         console.log(cityList.value)

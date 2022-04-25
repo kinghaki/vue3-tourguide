@@ -104,6 +104,8 @@ export default defineComponent({
     const getApiFoodList = (title: string) => {
       const param = `$filter=Picture/PictureUrl1 ne null and Class eq '${title}'`
       apiGetFoodList(param).then(data => {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         foodList.value = data
         search.value = true
         console.log('foodList', foodList.value)

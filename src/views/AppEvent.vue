@@ -115,6 +115,8 @@ export default defineComponent({
     const getApiEventList = (title: string) => {
       const param = `$filter=Picture/PictureUrl1 ne null and Class1 eq '${title}' or Class2 eq '${title}'&$skip=1`
       apiGetEventList(param).then(data => {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         eventList.value = data
         search.value = true
         console.log('eventList', eventList.value)

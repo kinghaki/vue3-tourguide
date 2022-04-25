@@ -110,6 +110,8 @@ export default defineComponent({
     const getApiSpotList = (title: string) => {
       const param = `$filter=Picture/PictureUrl1 ne null and Class1 eq '${title}' or Class2 eq '${title}' or Class3 eq '${title}'`
       apiGetSpotList(param).then(data => {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         spotList.value = data
         search.value = true
         console.log('spotList', spotList.value)
