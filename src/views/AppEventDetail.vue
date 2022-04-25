@@ -71,7 +71,7 @@ export default defineComponent({
         ]
         breadcrumbList.push(...eventData)
 
-        eventDetail.push(...data)
+        eventDetail.push(data[0])
         console.log(eventDetail)
       })
     }
