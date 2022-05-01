@@ -1,7 +1,7 @@
 <template>
   <div id='AppEvent'>
     <AppHeader />
-    <div class="event-main lg:px-20 px-5 mx-auto">
+    <div class="event-main lg:px-20 px-5 mx-auto containers">
       <AppNav :breadcrumbList="[{ name: '節慶活動', path: `${route.path}` }]" />
       <div class="event-select lg:flex mt-4">
         <AppDropDownMenu />

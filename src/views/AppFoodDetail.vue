@@ -1,7 +1,7 @@
 <template>
   <div id='AppFoodDetail'>
     <AppHeader/>
-    <div class="main lg:px-20 px-5 mx-auto max-w-6xl">
+    <div class="main lg:px-20 px-5 mx-auto max-w-6xl containers">
       <AppNav :breadcrumbList="breadcrumbList"/>
       <img :src="foodDetail[0]?.Picture.PictureUrl1" alt="" class="w-full h-96 mt-4">
       <div class="text-2xl mt-6">{{foodDetail[0]?.RestaurantName}}</div>

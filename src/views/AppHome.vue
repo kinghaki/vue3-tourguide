@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <AppHeader />
-    <div class="containermx-auto px-5 lg:px-20 mt-20 my-20">
+    <div class="mx-auto px-5 lg:px-20 mt-20 my-20 containers">
       <div class="search lg:flex justify-between">
         <div class="search-left">
           <h1 class="text-4xl">

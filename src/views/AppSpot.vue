@@ -1,7 +1,7 @@
 <template>
   <div id='AppSpot'>
     <AppHeader />
-    <div class="spot-main lg:px-20 px-5 mx-auto">
+    <div class="spot-main lg:px-20 px-5 mx-auto containers">
       <AppNav :breadcrumbList="[{name:'探索景點', path:`${route.path}`}]" />
       <div class="spot-select lg:flex mt-4">
         <AppDropDownMenu v-model="selectValue" />

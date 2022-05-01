@@ -1,7 +1,7 @@
 <template>
   <div id='AppFood'>
     <AppHeader />
-    <div class="food-main lg:px-20 px-5 mx-auto">
+    <div class="food-main lg:px-20 px-5 mx-auto containers">
       <AppNav :breadcrumbList="[{name:'品嘗美食', path:`${route.path}`}]" />
       <div class="food-select lg:flex mt-4 justify-center">
         <AppDropDownMenu />

@@ -1,6 +1,6 @@
 <template>
   <div id='APPHeader' class="w-full flex justify-between items-center lg:px-10 px-5 border-gray-200 border-b border-solid "
-    v-if="innerWidth > 576 | offsetWidth > 576">
+    v-if="innerWidth > 576 || offsetWidth > 576">
     <router-link to="/home" class="headerlogo h-full"></router-link>
     <div class="h-full md:flex hidden items-center font-bold" style="color: #646464;">
       <router-link to="/spot" class="ml-3 hover:border-yellow-300 hover:border-b-2 hover:border-solid">探索景點
